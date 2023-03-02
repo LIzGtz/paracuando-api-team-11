@@ -30,7 +30,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Publication.init({
-    id: DataTypes.UUID,
+    id: {
+      type: DataTypes.UUID,
+      primaryKey: true
+    },
     profileId: DataTypes.UUID,
     publicationTypeId: DataTypes.INTEGER,
     cityId: DataTypes.INTEGER,

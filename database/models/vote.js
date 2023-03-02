@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'publicationId'
       })
 
-      Vote.belongsTo(models.Profiles, {
+      Vote.belongsTo(models.Profile, {
         foreignKey: 'profileId'
       })
     }
